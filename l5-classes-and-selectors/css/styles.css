@@ -1,0 +1,51 @@
+/* 
+-- select all p tags with class=error
+p.error{
+    color:red;
+}
+-- select all p tags with class=success
+p.success{
+    color:green;
+}
+-- select all p tags with class=success and feedback
+p.success.feedback{
+    border: greenyellow 2px solid;
+    border-style: dotted;
+}
+-- select all p tags with id=content
+div#content{
+    background-color: #e4e4e4e4;
+    padding: 20px;
+} */
+
+/* select all p tags inside div */
+/* div p{
+    color: #c34c4c;
+} */
+/* select all tags with class = error inside div  */
+/* if the there is no space between div and .error then
+select div with class= error */
+
+/* div .error{
+    color: rgb(188, 134, 188);
+} */
+
+/* name end with factor */
+/* div[name$="factor"]{
+    margin: 30px;
+} */
+
+/* name contained x */
+/* div[name*="x"]{
+    color: aqua;
+} */
+
+div{
+    color: red;
+    border: 1px solid black;
+    border-style: dashed;
+}
+
+p{
+border: inherit;
+}

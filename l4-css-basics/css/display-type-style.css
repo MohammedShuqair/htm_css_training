@@ -1,0 +1,23 @@
+/*
+block level element
+take margin all around the element
+but if there is a block level element under it with margin
+the margin of both elements will render above each other (collapsing margin)
+*/
+/*
+inline element
+take margin only on left and right
+take padding all around the element
+but if there is a inline element under it with padding
+the padding of both elements will render above each other (collapsing padding)
+*/
+div{
+    border: 2px solid crimson;
+    margin: 20px;
+    padding: 20px;
+}
+span{
+    margin: 20px;
+    padding: 80px 0px;
+    display: inline-block;
+}

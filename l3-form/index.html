@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L3 Forms</title>
+</head>
+
+<body>
+    <h1>HTML FORM</h1>
+    <form >
+        <div>
+            <label for="username">User Name</label>
+            <input id="username" type="text" name="username" placeholder="user name" required>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="email" required>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" placeholder="password" required>
+        </div>
+        <br><br>
+        <div>
+
+            <div>
+                <input type="radio" id="male" value="male" name="gender">
+                <label for="male">male</label>
+            </div>
+            <div>
+                <input type="radio" id="female" value="female" name="gender">
+                <label for="female">female</label>
+            </div>
+        </div>
+        <br><br>
+        <div>
+            <label for="security">security question</label>
+            <select name="question" id="security">
+                <option value="q1">
+                    Option1
+                </option>
+                <option value="q2">
+                    Option2
+                </option>
+            </select>
+        </div>
+        <br><br>
+        <div>
+            <label for="description">ENTER DESCRIPTION </label>
+            <br>
+            <textarea name="description" id="description" cols="30" rows="10"
+            placeholder="enter data">
+            </textarea>
+        </div>
+        
+        <input type="submit" name="submit-button" id="submit-button" value="submit the form">
+    </form>
+</body>
+
+</html>
