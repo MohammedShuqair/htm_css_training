@@ -1,0 +1,15 @@
+.circle{
+    background-color: pink;
+    width: 100px;
+    padding: 50px 0px;
+    margin: 60px auto;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    line-height: 0px;
+    transition: background-color 1s, transform 0.5s ease-in-out;
+}
+.circle:hover{
+    background-color: salmon;
+    transform: rotateZ(30deg);
+}
