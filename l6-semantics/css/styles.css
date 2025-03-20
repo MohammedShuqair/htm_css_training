@@ -35,7 +35,7 @@ header h1{
 }
 
 .banner h2{
-    font-size: 74px;
+    font-size: 3.5vw;
 }
 .banner span{
     font-size: 1.3em;
@@ -68,9 +68,19 @@ nav li a{
     color: #484848;
 }
 
+nav li a:hover{
+    /* padding:20px;
+    background-color: pink; */
+    text-decoration: underline;
+}
+/* nav li:first-child{
+    border: #4b4b4b solid 1px;
+ } */
 nav li a.join{
     color: red;
 }
+
+
 
 main{
     max-width: 100%;
@@ -87,6 +97,16 @@ main article p{
     color: #4b4b4b;
     line-height: 2em;
 }
+ p::selection{
+    background-color: red;
+    color: white;
+    padding: 2px;
+}
+ p::after{
+
+    content: '...';
+}
+
 .images{
     white-space: nowrap;
     text-align: center;
@@ -100,6 +120,12 @@ main article p{
 }
 .images li img{
     max-width: 100%;
+}
+
+.images li img:hover{
+    position: relative;
+    left: 10px;
+    bottom: 10px;
 }
 
 .join{
@@ -120,6 +146,15 @@ main article p{
     padding: 10px 20px;
     border: 4px solid white;
     border-radius: 30px;
+}
+.join input:focus{
+    border: 4px solid black;
+}
+.join input:valid{
+    border: 4px solid green;
+}
+.join input:invalid{
+    border: 4px solid red;
 }
 footer{
     background-color: red;
