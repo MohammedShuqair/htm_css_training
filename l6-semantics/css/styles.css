@@ -46,6 +46,7 @@ nav{
     padding: 20px;
     position: sticky;
     top: 105px;
+    z-index: 1;
 }
 
 nav ul{
@@ -53,6 +54,7 @@ nav ul{
     max-width: 800px;
     list-style: none;
     margin: 0 auto;
+    
     /* display: flex;
     justify-content: space-between; */
 }
@@ -61,6 +63,7 @@ nav li{
     display: inline-block;
     width: 25%;
     font-size: 24px;
+    text-align: center;
 }
 
 nav li a{
@@ -87,6 +90,8 @@ main{
     width: 1200px;
     margin: 80px auto;
     padding: 0 40px;
+    /* box-sizing: border-box; */
+
 }
 
 main article h2{
@@ -161,5 +166,71 @@ footer{
     color: white;
     text-align: center;
     padding: 20px;
+}
 
+/* responsive media query */
+
+@media screen and (max-width: 1200px) {
+    .banner h2{
+        font-size: 60px;
+    }
+    nav li{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .banner h2{
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .banner h2{
+        font-size: 24px;
+    }
+
+    .banner .welcome br{
+       display: none;
+    }
+    .banner .welcome span{
+        font-size: 1em;
+    }
+
+    .banner .welcome{
+        position: relative;
+        top:auto;
+        bottom: 3px;
+        text-align: center;
+    }
+
+    nav li{
+        font-size: 14px;
+    }
+    
+.images li{
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+}
+
+.images{
+    margin: 40px 0;
+}
+}
+@media screen and (max-width: 500px) {
+   nav li{
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    margin: 12px 0;
+   }
+
+   header{
+    position: static;
+    z-index: 0;
+ }
+ nav{
+    padding: 20px;
+    position: relative;
+    top: -5px;
+}
 }
