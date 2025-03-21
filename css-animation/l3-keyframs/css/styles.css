@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sky, .land, .road{
+   position: relative;
+}
+
+.sky{
+    background-color: skyblue;
+    height: 40%;
+}
+.land{
+    background-color: green;
+    height: 30%;
+}
+.road{
+    background-color: #323232;
+    height: 30%;
+    border-top: #9f9f9f 10px solid;
+    border-bottom: #9f9f9f 10px solid;
+}
+.road-line{
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    border: white 5px dashed;
+}
+
+.mario{
+    display: block;
+    position: absolute;
+    top: -35px;
+    animation-name: drive;
+    animation-duration: 1s;
+}
+
+.luigi{
+   display: block;
+   position: absolute;
+   bottom: 15px;
+   animation-name: drive;
+    animation-duration: 1.5s;
+}
+
+@keyframes drive{
+    from{
+       transform: translateX(0px);
+    }
+    to{
+        transform: translateX(90dvw);
+
+    }
+    
+}
