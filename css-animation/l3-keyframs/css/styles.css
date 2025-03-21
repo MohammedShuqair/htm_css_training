@@ -42,6 +42,8 @@ body, html{
     top: -35px;
     animation-name: drive;
     animation-duration: 1s;
+    /* backwards + forward */
+    animation-fill-mode: both;
 }
 
 .luigi{
@@ -49,12 +51,21 @@ body, html{
    position: absolute;
    bottom: 15px;
    animation-name: drive;
+   /* if luigi animation start from 200px instead of 0
+   without animation-fill-mode: backwards; luigi will jump to 200px and start animation from there.
+   with animation-fill-mode: backwards; luigi will start from 200px and move to end and return back to which point .luigi image was
+   */
+   animation-fill-mode: backwards;
+
     animation-duration: 1.5s;
+    /* we can see  animation-fill-mode: backwards effect when we use delay*/
+    animation-delay: 1s;
+
 }
 
 @keyframes drive{
     from{
-       transform: translateX(0px);
+       transform: translateX(200px);
     }
     to{
         transform: translateX(90dvw);
