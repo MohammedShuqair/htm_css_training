@@ -37,39 +37,57 @@ body, html{
 }
 
 .mario{
-    display: block;
-    position: absolute;
     top: -35px;
-    animation-name: drive;
-    animation-duration: 1s;
+    animation-duration: 3s;
     /* backwards + forward */
     animation-fill-mode: both;
+
+}
+.luigi , .mario{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    display: block;
+    animation-iteration-count: infinite;
+    animation-name: drive;
+    transition: 1s ;
 }
 
+
 .luigi{
-   display: block;
-   position: absolute;
    bottom: 15px;
-   animation-name: drive;
    /* if luigi animation start from 200px instead of 0
    without animation-fill-mode: backwards; luigi will jump to 200px and start animation from there.
    with animation-fill-mode: backwards; luigi will start from 200px and move to end and return back to which point .luigi image was
    */
    animation-fill-mode: backwards;
 
-    animation-duration: 1.5s;
+    animation-duration: 3.5s;
     /* we can see  animation-fill-mode: backwards effect when we use delay*/
     animation-delay: 1s;
+    /* from to ,to from etc */
+    /* animation-direction: alternate; */
+        /* to from,to from etc */
+    animation-direction: alternate-reverse;
 
+    /* to from, to from etc */
+    /* animation-direction: reverse; */
+
+}
+
+.luigi , .mario:hover{
+    transform: rotateZ(360deg);
 }
 
 @keyframes drive{
     from{
-       transform: translateX(200px);
-    }
-    to{
-        transform: translateX(90dvw);
+       transform: translateX(-200px);
 
     }
+    to{
+        transform: translateX(120dvw);
+
+    }
+    
     
 }
